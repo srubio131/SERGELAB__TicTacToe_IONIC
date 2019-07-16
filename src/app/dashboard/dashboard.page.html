@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="dashboard">
+      <ng-container *ngFor="let row of size; let r = index">
+        <div class="row">
+            <ng-container *ngFor="let col of size; let c = index">
+                <div class="cell" (click)="onClickCell(r, c)">{{ drawSimbolInCell(r, c) }}</div>
+            </ng-container>
+        </div>
+      </ng-container>
+      El ganador es: {{ winner }}
+    </div>
+</ion-content>
+
